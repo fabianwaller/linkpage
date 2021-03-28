@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Metadaten -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Titel -->
+    <title>linkpage @fabianwaller</title>
+
+    <!-- SASS Import -->
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <!-- Icons Import -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    
+    <div class="content">
+
+        <div class="iconbox transition1"><img src="assets/img/icon3.png" alt="" class="icon"></div>
+        
+        <h2 class="user transition2">@fabianwaller</h2>
+        <p class="description transition2">linkpage</p>
+
+        <a href="https://github.com/fabianwaller" class="linkbox transition3"><i class='bx bxl-github'></i><p>GitHub</p></a>
+        <a href="https://www.instagram.com/fabianwallerr/" class="linkbox transition3"><i class='bx bxl-instagram'></i><p>Instagram</p></a>
+        <a href="https://snapchat.com/add/fabian.wr" class="linkbox transition3"><i class='bx bxl-snapchat'></i><p>Snapchat</p></a>
+        <a href="https://twitter.com/fabianwallerr" class="linkbox transition3"><i class='bx bxl-twitter'></i><p>Twitter</p></a>
+
+    </div>
+
+</body>
+
+<!-- JS Import -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+    integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+    crossorigin="anonymous"></script>
+
+<script src="assets/js/main.bundle.js"></script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
+    gsap.from(".transition1", {
+        scrollTrigger: {
+            trigger: '.transition1',
+            start: "top bottom"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: .1
+    })
+    gsap.from(".transition2", {
+        scrollTrigger: {
+            trigger: '.transition2',
+            start: "top bottom"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: .2
+    })
+    gsap.from(".transition3", {
+        scrollTrigger: {
+            trigger: '.transition3',
+            start: "top bottom"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: .3
+    })
+</script>
+
+</html>
